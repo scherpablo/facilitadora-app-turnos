@@ -33,9 +33,9 @@ function css() {
 
 function javascript() {
     return src(paths.js)
-      .pipe(terser())
-      .pipe(sourcemaps.write('.'))
-      .pipe(dest('public/build/js'));
+    .pipe(terser())
+    .pipe(sourcemaps.write('.'))
+    .pipe(dest('public/build/js'));
 }
 
 function imagenes() {
