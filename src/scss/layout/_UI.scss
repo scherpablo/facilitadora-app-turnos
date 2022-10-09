@@ -1,0 +1,62 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenedor-app {
+    @include m.tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        min-height: 100vh;
+    }
+    
+    .titulo {
+        padding-top: 4.5rem;
+        text-align: center;
+        font-size: 5rem;
+        font-weight: bold;        
+        @include m.tablet {
+            padding-top: 68rem;            
+        }
+    }
+
+    .imagen {
+        height: 25rem;
+        background-image: url('../img/1.jpg');
+        background-size: cover;
+        background-position: center center;
+        @include m.tablet {
+            height: auto;   
+            background-image: url('../img/2.jpg');                   
+        }
+    }
+
+    .app {
+        width: 95%;
+        padding: 1rem 0;
+        margin: 0 auto;
+    }
+}
+
+.nombre-pagina {
+    margin: 2rem 0;
+    font-weight: v.$bold;
+}
+
+.descripcion-pagina {
+    text-align: center;
+}
+
+// .footer {
+//     text-align: center;
+//     // padding-top: 10rem;  
+//     @include m.tablet {
+//             padding-top: 35rem;
+//         }
+// }
+
+// .copyright {
+//     font-size: 1.5rem;
+// }
+
+// .link {
+//     color: v.$azul;
+// }
