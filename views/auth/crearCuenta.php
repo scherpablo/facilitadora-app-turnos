@@ -1,26 +1,30 @@
 <h1 class="nombre-pagina">Crea una cuenta</h1>
 <p class="descripcion-pagina">Llena el siguiente formulario</p>
 
+<?php
+    include_once __DIR__ . '/../tamplates/alertas.php';
+?>
+
 <form action="/crearCuenta" class="formulario" method="POST">
 
     <div class="campo">
         <label for="text">Nombre</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre">
+        <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" value="<?php echo s($usuario->nombre); ?>">
     </div>
 
     <div class="campo">
         <label for="text">Apellido</label>
-        <input type="text" id="apellido" name="apellido" placeholder="Ingresa tu apellido">
+        <input type="text" id="apellido" name="apellido" placeholder="Ingresa tu apellido" value="<?php echo s($usuario->apellido); ?>">
     </div>
 
     <div class="campo">
         <label for="tel">Telefono</label>
-        <input type="phone" id="telefono" name="telefono" placeholder="Ingresa tu telefono">
+        <input type="phone" id="telefono" name="telefono" placeholder="Ingresa tu telefono" value="<?php echo s($usuario->telefono); ?>">
     </div>
 
     <div class="campo">
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Ingresa tu email">
+        <input type="email" id="email" name="email" placeholder="Ingresa tu email" value="<?php echo s($usuario->email); ?>">
     </div>
 
     <div class="campo">

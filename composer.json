@@ -7,6 +7,7 @@
             "MVC\\" : "./",
             "Controllers\\" : "./controllers",
             "Model\\" : "./models",
+            "Classes\\" : "./classes",
             "Scher\\FacilitadoraAppTurnos\\" : "src/"
         }
     },
@@ -16,5 +17,7 @@
             "email": "scherpablo@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "phpmailer/phpmailer": "^6.6"
+    }
 }
