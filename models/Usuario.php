@@ -24,8 +24,8 @@ class Usuario extends ActiveRecord {
         $this->email = $args['email'] ?? '';
         $this->password = $args['password'] ?? '';
         $this->telefono = $args['telefono']?? '';
-        $this->admin = $args['admin'] ?? 0;
-        $this->confirmado = $args['confirmado'] ?? 0;
+        $this->admin = $args['admin'] ?? '0';
+        $this->confirmado = $args['confirmado'] ?? '0';
         $this->token = $args['token'] ?? '';
     }
 
@@ -54,8 +54,8 @@ class Usuario extends ActiveRecord {
 
     public function validarUsuario() {
         // Revisa si el usuario ya existe
-        $query = "SELECT * FROM " . self::$tabla . " WHERE email = ' ". $this->email ." ' LIMIT 1" ;
-
+        $query = "SELECT * FROM " . static::$tabla . " WHERE email = '" . $this->email .   "  ' LIMIT 1";        
+        
         $resultado = self::$db->query($query);        
 
         if($resultado->num_rows) {

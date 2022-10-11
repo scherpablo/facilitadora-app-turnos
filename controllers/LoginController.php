@@ -40,7 +40,9 @@ class LoginController {
                 $resultado = $usuario -> validarUsuario();
 
                 if($resultado->num_rows) {
+
                     $alertas = Usuario::getAlertas();
+
                 } else {
                     // Hashear Password
                     $usuario -> hashPassword();
@@ -71,5 +73,34 @@ class LoginController {
 
     public static function mensaje(Router $router){
         $router->render('auth/mensaje');
+    }
+
+    public static function confirmar(Router $router){
+
+        $alertas = [];
+
+        $token = s($_GET['token']);
+
+        $usuario = Usuario::where('token', $token);
+
+        debuguear($token);
+
+        // if(empty($usuario)) {
+
+        //     echo 'no valido';
+
+        // } else {
+
+        //     echo 'valido';
+
+        // }
+
+        // Renderizar la Vista
+        // $alertas = Usuario::getAlertas();
+
+        // Obtener Alertas
+        $router->render('auth/confirmarCuenta', [
+            'alertas' => $alertas 
+        ]);
     }
 }

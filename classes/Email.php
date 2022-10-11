@@ -30,8 +30,8 @@ class Email
         $mail->Username = 'c6245119063e5f';
         $mail->Password = '178583a5e38e72';
 
-        $mail->setFrom('cuentas@appsalon.com');
-        $mail->addAddress('cuentas@appsalon.com', 'AppSalon.com');
+        $mail->setFrom('cuentas@facilitadora-app-de-turnos.com.ar');
+        $mail->addAddress('cuentas@facilitadora-app-de-turnos.com.ar', 'facilitadora-app-de-turnos.com.ar');
         $mail->Subject = 'Confirma tu Cuenta';
 
         // Utilizamos HTML
