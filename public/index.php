@@ -2,6 +2,7 @@
 
 require_once __DIR__ . '/../includes/app.php';
 
+use Controllers\CitaController;
 use Controllers\LoginController;
 use MVC\Router;
 
@@ -25,7 +26,11 @@ $router->post('/crearCuenta', [LoginController::class, 'crear']);
 // Confirmar Cuenta
 $router->get('/confirmarCuenta', [LoginController::class, 'confirmar']);
 
+// Mensaje de confirmacion
 $router->get('/mensaje', [LoginController::class, 'mensaje']);
+
+// Area Privada
+$router->get('/cita', [CitaController::class, 'index']);
 
 // Comprueba y valida las rutas, que existan y les asigna las funciones del Controlador
 $router->comprobarRutas();

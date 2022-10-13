@@ -14,7 +14,6 @@
 <body>
 
     <div class="contenedor-app">
-
         <div class="imagen">
             <div class="titulo">Salon de Belleza</div>
         </div>
@@ -22,8 +21,11 @@
         <div class="app">
             <?php echo $contenido; ?>
         </div>
-
     </div>
+
+    <?php    
+        echo $script ?? '';
+    ?>
 
 </body>
 

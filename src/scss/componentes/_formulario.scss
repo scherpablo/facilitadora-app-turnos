@@ -18,5 +18,11 @@
         border: none;
         border-radius: .5rem;
         padding: 1rem;
+
+        &:disabled {
+            background-color: lighten (v.$negro, 10%);
+            color: v.$blanco;
+            cursor: not-allowed;
+        }
     }
 }

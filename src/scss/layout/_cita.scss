@@ -1,0 +1,20 @@
+.seccion {
+
+    padding: 3rem;
+    display: none;
+    // display: block;
+    
+    .text-center {
+        
+        text-align: center;
+    
+    }
+
+    .mostrar {
+        display: block;
+    }
+
+    .ocultar {
+        display: none;
+    }
+}

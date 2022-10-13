@@ -5,3 +5,8 @@
     @include m.boton2(v.$azul, v.$blanco);
     border-radius: .5rem;      
 }
+
+.botons {
+    @include m.boton3(v.$azul, v.$blanco);
+    border-radius: .5rem;
+}
