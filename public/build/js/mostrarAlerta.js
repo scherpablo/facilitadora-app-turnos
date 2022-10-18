@@ -1,0 +1,1 @@
+function mostrarAlerta(t,e){const a=document.createElement("DIV");a.textContent=t,a.classList.add("alerta"),a.classList.add(e);document.querySelector(".formulario").appendChild(a)}

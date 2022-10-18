@@ -28,10 +28,10 @@ class LoginController
                     if ($usuario->comprobarYVerificarPassword($auth->password)) {
 
                         // Autenticar el usuario
-                        session_start();
-                        // if (!isset($_SESSION)) {
-                        //     session_start();
-                        // };
+                        // session_start();
+                        if (!isset($_SESSION)) {
+                            session_start();
+                        };
 
                         $_SESSION['id'] = $usuario->id;
                         $_SESSION['nombre'] = $usuario->nombre . " " . $usuario->apellido;

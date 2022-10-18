@@ -12,8 +12,6 @@ class CitaController {
             session_start();
         };
 
-        // debuguear($_SESSION);
-
         $router -> render('cita/index', [
             'nombre' => $_SESSION['nombre']
 
