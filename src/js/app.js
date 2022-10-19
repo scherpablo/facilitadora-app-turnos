@@ -4,6 +4,7 @@ const pasoInicial = 1;
 const pasoFinal = 3;
 
 const cita = { 
+    id: '',
     nombre: '',
     fecha: '',
     hora: '',
@@ -22,6 +23,8 @@ function iniciarApp() {
     paginaAnterior(); //Muestra la seccion anterior
 
     consultarAPI(); //Consulta la API en el backend de PHP
+
+    idCliente();
     nombreCliente(); //Guardamos el nombre del cliente en el objeto cita
     seleccionarFecha(); //Seleeccionamos la fecha de del turno y la añadimos al objeto cita
     seleccionarHora(); //Seleccionamos la hora del turno y la añadimos al objeto cita
@@ -167,6 +170,11 @@ function seleccionarServicio(servicio) {
     }        
 }
 
+function idCliente() {
+    const id = document.querySelector('#id').value; //Seleccionamos el id nombre del formulario y le asignamos el valor ingresado en el value
+    cita.id = id;
+}
+
 function nombreCliente() {
     const nombre = document.querySelector('#nombre').value; //Seleccionamos el id nombre del formulario y le asignamos el valor ingresado en el value
     cita.nombre = nombre;
@@ -199,8 +207,7 @@ function seleccionarHora() {
         } else { 
             cita.hora = e.target.value;            
         }
-    })
-    
+    })    
 }
 
 function mostrarResumen() {
@@ -283,11 +290,58 @@ function mostrarResumen() {
     resumen.appendChild(botonReservar);   
 }
 
-function reservarTurno() {
-    const data = new FormData();
-    data.append('nombre', 'Pablo');
+async function reservarTurno() {
 
-    // console.log([...data]); //De esta manera podemos con el console log ver el contenido del Form Data, sino no se puede...   
+    const { nombre, fecha, hora, servicios, id } = cita;
+
+    const idServicios = servicios.map(servicio => servicio.id);
+
+    const datos = new FormData();
+    
+    datos.append('fecha', fecha);
+    datos.append('hora', hora);
+    datos.append('ususarioId', id);
+    datos.append('servicios', idServicios);
+
+    // console.log([...datos]);
+
+    try {
+        // Peticion a la API
+    const url = 'http://localhost:3000/api/citas';
+
+    const respuesta = await fetch(url, {
+        method: 'POST',
+        body: datos
+    });
+
+    const resultado = await respuesta.json();
+
+    // console.log(resultado.resultado);    
+
+    if (resultado.resultado) { 
+        Swal.fire({
+            icon: 'success',
+            title: 'Turno Reservado!!!',
+            text: 'Muchas gracias por elegirnos',
+            // button: 'OK'
+        }).then(() => {             
+            setTimeout(() =>{;
+                window.location.reload();
+            }, 3000);
+        } )
+    }
+        
+    } catch (error) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Error de Conexión',
+            text: 'Hubo un error al guardar el turno',
+        })        
+    }
+
+    
+
+    // console.log([...datos]); //De esta manera podemos con el console log ver el contenido del Form Data, sino no se puede...   
 }
 
 function mostrarAlerta(mensaje, tipo, elemento, desaparece = true) {
