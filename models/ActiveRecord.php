@@ -162,6 +162,8 @@ class ActiveRecord
         $query .= join("', '", array_values($atributos));
         $query .= "') ";
 
+        // return json_encode(['query'=>$query]); //Código para debuguear los llamados por FETCH
+
         // Resultado de la consulta
         $resultado = self::$db->query($query);
         return [

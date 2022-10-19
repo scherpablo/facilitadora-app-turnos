@@ -36,6 +36,22 @@
     }
 }
 
+.barra {
+
+    margin: v.$separacion 0;
+
+    @include m.tablet {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .boton{
+        @include m.boton(v.$negro, v.$blanco);
+        margin: 0;
+    }
+}
+
 .nombre-pagina {
     margin: 2rem 0;
     font-weight: v.$bold;

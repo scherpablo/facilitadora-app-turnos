@@ -300,7 +300,7 @@ async function reservarTurno() {
     
     datos.append('fecha', fecha);
     datos.append('hora', hora);
-    datos.append('ususarioId', id);
+    datos.append('usuarioId', id);
     datos.append('servicios', idServicios);
 
     // console.log([...datos]);
@@ -327,7 +327,7 @@ async function reservarTurno() {
         }).then(() => {             
             setTimeout(() =>{;
                 window.location.reload();
-            }, 3000);
+            }, 1000);
         } )
     }
         
@@ -337,9 +337,7 @@ async function reservarTurno() {
             title: 'Error de Conexión',
             text: 'Hubo un error al guardar el turno',
         })        
-    }
-
-    
+    }    
 
     // console.log([...datos]); //De esta manera podemos con el console log ver el contenido del Form Data, sino no se puede...   
 }

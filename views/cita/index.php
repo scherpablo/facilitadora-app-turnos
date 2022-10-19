@@ -1,6 +1,12 @@
 <h1 class="nombre-pagina">Crear Nuevo Turno</h1>
 <p class="descripcion-pagina">Elige tus servicios y completa tus datos a continuación</p>
 
+<div class='barra'>
+    <p>Hola: <?php echo $nombre ?? ''; ?></p> 
+    <a class='boton' href="/logout">Cerrar Sesión</a>
+</div>
+
+
 <div id='app'>
     <nav class='tabs'>
         <button class='actual' type='button' data-paso='1'>Servicios</button>
@@ -43,7 +49,7 @@
 
 <?php
 
-    $script = "
+$script = "
         <script src='//cdn.jsdelivr.net/npm/sweetalert2@11'></script>
         <script src='build/js/app.js'></script>
     ";
