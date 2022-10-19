@@ -1,9 +1,16 @@
 <?php
 
-$db = mysqli_connect('localhost', 'root', '', 'appsalon_mvc');
+$db = mysqli_connect(
+
+    $_ENV['DB_HOST'], 
+    $_ENV['DB_USER'], 
+    $_ENV['DB_PASS'], 
+    $_ENV['DB_BD']    
+); 
+
+// debuguear($_ENV);
 
 // mysqli_set_charset($db, 'utf8mb4');
-
 
 if (!$db) {
     echo "Error: No se pudo conectar a MySQL.";
