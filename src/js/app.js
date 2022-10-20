@@ -114,8 +114,8 @@ function paginaSiguiente() {
 async function consultarAPI() {
     
     try {   
-        // const url = `${location.origin}/api/servicios`;
-        const url = 'http://localhost:3000/api/servicios';
+        const url = `${location.origin}/api/servicios`;
+        // const url = 'http://localhost:3000/api/servicios';
         // const url = 'https://facilitadora-app-de-turnos.herokuapp.com//api/servicios';
         // const url = `${server}/api/servicios`;
         const resultado = await fetch(url); //Funcion que nos permite consumir la url
