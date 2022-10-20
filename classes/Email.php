@@ -36,13 +36,14 @@ class Email
 
         $mail->setFrom('pablo@facilitadora.com.ar');
         // $mail->setFrom('cuentas@facilitadora-app-de-turnos.com.ar');
-        $mail->addAddress('scherpablo@gmail.com', 'facilitadora-app-de-turnos.com.ar');
-        // $mail->addAddress('cuentas@facilitadora-app-de-turnos.com.ar', 'facilitadora-app-de-turnos.com.ar');
+        // $mail->addAddress('scherpablo@gmail.com', 'facilitadora-app-de-turnos.com.ar');
+        $mail->addAddress('cuentas@facilitadora-app-de-turnos.com.ar', 'facilitadora-app-de-turnos.com.ar');
         $mail->Subject = 'Confirma tu Cuenta';
 
         // Utilizamos HTML
         $mail->isHTML(TRUE);
         $mail->CharSet = 'UTF-8';
+        $mail->Encoding = 'base64';
 
         $contenido = "<html>";
         $contenido .= "<p><strong>Hola " . $this->email . "</strong> Has creado tu cuenta en Facilitadora App de Turnos,
