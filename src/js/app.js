@@ -114,7 +114,7 @@ function paginaSiguiente() {
 async function consultarAPI() {
     
     try {   
-        const url = 'https://facilitadora-app-de-turnos.herokuapp.com/api/servicios';
+        const url = 'https://us-cdbr-east-06.cleardb.net/api/servicios';
         // const url = 'http://localhost:3000/api/servicios';
         const resultado = await fetch(url); //Funcion que nos permite consumir la url
         const servicios = await resultado.json(); //Obtenemos los resultados como json
