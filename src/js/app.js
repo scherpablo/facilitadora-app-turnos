@@ -111,6 +111,8 @@ function paginaSiguiente() {
     });
 }
 
+const server = window.location.origin;
+
 async function consultarAPI() {
     
     try {   
