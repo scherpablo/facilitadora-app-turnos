@@ -239,31 +239,31 @@ class LoginController
 
         $alertas = [];
 
-        // // Sanitizar la entrada al HTML
-        // $token = s($_GET['token']);
+        // Sanitizar la entrada al HTML
+        $token = s($_GET['token']);
 
         // debuguear($token);
 
-        // $usuario = Usuario::where('token', $token);
+        $usuario = Usuario::where('token', $token);
 
-        // if (empty($usuario) || $usuario->token === '') {
+        if (empty($usuario) || $usuario->token === '') {
 
-        //     //mostrar mensaje de error
-        //     Usuario::setAlerta('error', 'Token no válido...');
-        // } else {
+            //mostrar mensaje de error
+            Usuario::setAlerta('error', 'Token no válido...');
+        } else {
 
-        //     //cambiar valor de columna confirmado
-        //     $usuario->confirmado = '1';
-        //     //eliminar token
-        //     $usuario->token = '';
-        //     //Guardar y Actualizar 
-        //     $usuario->guardar();
-        //     //mostrar mensaje de exito
-        //     Usuario::setAlerta('exito', 'Cuenta verificada exitosamente...');
-        // }
+            //cambiar valor de columna confirmado
+            $usuario->confirmado = '1';
+            //eliminar token
+            $usuario->token = '';
+            //Guardar y Actualizar 
+            $usuario->guardar();
+            //mostrar mensaje de exito
+            Usuario::setAlerta('exito', 'Cuenta verificada exitosamente...');
+        }
 
-        // // Renderizar la Vista
-        // $alertas = Usuario::getAlertas();
+        // Renderizar la Vista
+        $alertas = Usuario::getAlertas();
 
         // Obtener Alertas
         $router->render('auth/confirmarCuenta', [
