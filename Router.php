@@ -31,7 +31,7 @@ class Router
         // $auth = $_SESSION['login'] ?? null;
 
         // $currentUrl = $_SERVER['PATH_INFO'] ?? '/';
-        $currentUrl = strtok($_SERVER['REQUEST_URI'], '?') ?? '/';
+        $currentUrl = strtok($_SERVER['REQUEST_URI'], '?') ?? '/'; //Esta configuracion es para heroku y funciona la confirmacion de nuevo usuario en mailtrap
         // $currentUrl = $_SERVER['REQUEST_URI'] === '' ? '/' : $_SERVER['REQUEST_URI']; //Esta configuracion es para Heroku
         $method = $_SERVER['REQUEST_METHOD'];
 
