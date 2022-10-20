@@ -31,7 +31,8 @@ class Router
         // $auth = $_SESSION['login'] ?? null;
 
         // $currentUrl = $_SERVER['PATH_INFO'] ?? '/';
-        $currentUrl = $_SERVER['REQUEST_URI'] === '' ? '/' : $_SERVER['REQUEST_URI']; //Esta configuracion es para Heroku
+        $currentUrl = strtok($_SERVER['REQUEST_URI'], '?') ?? '/';
+        // $currentUrl = $_SERVER['REQUEST_URI'] === '' ? '/' : $_SERVER['REQUEST_URI']; //Esta configuracion es para Heroku
         $method = $_SERVER['REQUEST_METHOD'];
 
         if ($method === 'GET') {
