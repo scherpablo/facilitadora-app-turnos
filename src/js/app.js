@@ -114,7 +114,7 @@ function paginaSiguiente() {
 async function consultarAPI() {
     
     try {   
-        const url = 'https://us-cdbr-east-06.cleardb.net/api/servicios';
+        const url = 'mysql://b610abad1d1061:843082c8@us-cdbr-east-06.cleardb.net/heroku_f2d45e4cc8c9927?reconnect=true/api/servicios';
         // const url = 'http://localhost:3000/api/servicios';
         const resultado = await fetch(url); //Funcion que nos permite consumir la url
         const servicios = await resultado.json(); //Obtenemos los resultados como json
