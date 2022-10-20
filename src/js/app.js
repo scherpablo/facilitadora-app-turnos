@@ -114,8 +114,9 @@ function paginaSiguiente() {
 async function consultarAPI() {
     
     try {   
-        const url = `${location.origin}/api/servicios`;
+        // const url = `${location.origin}/api/servicios`;
         // const url = 'http://localhost:3000/api/servicios';
+        const url = 'https://facilitadora-app-de-turnos.herokuapp.com//api/servicios';
         const resultado = await fetch(url); //Funcion que nos permite consumir la url
         const servicios = await resultado.json(); //Obtenemos los resultados como json
 
@@ -308,8 +309,9 @@ async function reservarTurno() {
 
     try {
         // Peticion a la API
-    const url = `${location.origin}/api/citas`;
+    // const url = `${location.origin}/api/citas`;
     // const url = 'http://localhost:3000/api/citas';
+    const url = 'https://facilitadora-app-de-turnos.herokuapp.com//api/citas';
 
     const respuesta = await fetch(url, {
         method: 'POST',

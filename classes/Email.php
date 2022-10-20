@@ -24,20 +24,20 @@ class Email
         // Crear el objeto del mail
         $mail = new PHPMailer();
         $mail->isSMTP();
-        $mail->Host = 'c2050367.ferozo.com';
-        // $mail->Host = 'smtp.mailtrap.io'; //Configuracion para localhost
+        // $mail->Host = 'c2050367.ferozo.com';
+        $mail->Host = 'smtp.mailtrap.io'; //Configuracion para localhost
         $mail->SMTPAuth = true;
-        $mail->Port = 465;
-        // $mail->Port = 2525; //Configuracion para localhost
-        $mail->Username = 'pablo@facilitadora.com.ar';
-        // $mail->Username = 'c6245119063e5f'; //Configuracion para localhost
-        $mail->Password = 'Liamsl1984';
-        // $mail->Password = '178583a5e38e72'; //Configuracion para localhost
+        // $mail->Port = 465;
+        $mail->Port = 2525; //Configuracion para localhost
+        // $mail->Username = 'pablo@facilitadora.com.ar';
+        $mail->Username = 'c6245119063e5f'; //Configuracion para localhost
+        // $mail->Password = 'Liamsl1984';
+        $mail->Password = '178583a5e38e72'; //Configuracion para localhost
 
-        $mail->setFrom('pablo@facilitadora.com.ar');
-        // $mail->setFrom('cuentas@facilitadora-app-de-turnos.com.ar');
-        $mail->addAddress('scherpablo@gmail.com', 'facilitadora-app-de-turnos.com.ar');
-        // $mail->addAddress('cuentas@facilitadora-app-de-turnos.com.ar', 'facilitadora-app-de-turnos.com.ar');
+        // $mail->setFrom('pablo@facilitadora.com.ar');
+        $mail->setFrom('cuentas@facilitadora-app-de-turnos.com.ar');
+        // $mail->addAddress('scherpablo@gmail.com', 'facilitadora-app-de-turnos.com.ar');
+        $mail->addAddress('cuentas@facilitadora-app-de-turnos.com.ar', 'facilitadora-app-de-turnos.com.ar');
         $mail->Subject = 'Confirma tu Cuenta';
 
         // Utilizamos HTML
