@@ -19,7 +19,6 @@ class Router
 
     public function comprobarRutas()
     {
-
         // Proteger Rutas...
         session_start();
         // if (!isset($_SESSION)) {
@@ -31,7 +30,8 @@ class Router
 
         // $auth = $_SESSION['login'] ?? null;
 
-        $currentUrl = $_SERVER['REQUEST_URI'] === '' ? '/' : $_SERVER['REQUEST_URI'];
+        // $currentUrl = $_SERVER['PATH_INFO'] ?? '/';
+        $currentUrl = $_SERVER['REQUEST_URI'] === '' ? '/' : $_SERVER['REQUEST_URI']; //Esta configuracion es para Heroku
         $method = $_SERVER['REQUEST_METHOD'];
 
         if ($method === 'GET') {

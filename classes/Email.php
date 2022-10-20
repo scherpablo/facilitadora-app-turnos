@@ -43,13 +43,13 @@ class Email
         // Utilizamos HTML
         $mail->isHTML(TRUE);
         $mail->CharSet = 'UTF-8';
-        $mail->Encoding = 'base64';
+        // $mail->Encoding = 'base64';
 
         $contenido = "<html>";
         $contenido .= "<p><strong>Hola " . $this->email . "</strong> Has creado tu cuenta en Facilitadora App de Turnos,
         solo debes confirmarla haciendo click en el siguiente enlace.</p>";
-        $contenido .= "<p>Presiona aquí: <a href= 'https://facilitadora-app-de-turnos.herokuapp.com/confirmarCuenta?token=" . $this->token . "'>Confirmar Cuenta</a></p>";
-        // $contenido .= "<p>Presiona aquí: <a href= 'http://localhost:3000/confirmarCuenta?token=" . $this->token . "'>Confirmar Cuenta</a></p>";
+        // $contenido .= "<p>Presiona aquí: <a href= 'https://facilitadora-app-de-turnos.herokuapp.com/confirmarCuenta?token=" . $this->token . "'>Confirmar Cuenta</a></p>";
+        $contenido .= "<p>Presiona aquí: <a href= 'http://localhost:3000/confirmarCuenta?token=" . $this->token . "'>Confirmar Cuenta</a></p>";
         $contenido .= "<p>Si tu no solicitaste esta cuenta, puedes ignorar el mensaje.</p>";
         $contenido .= "</html>";
 
