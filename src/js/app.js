@@ -121,12 +121,13 @@ async function consultarAPI() {
         // const url = 'https://facilitadora-app-de-turnos.herokuapp.com//api/servicios';
         const url = `${server}/api/servicios`;
         const resultado = await fetch(url); //Funcion que nos permite consumir la url
-        const servicios = await resultado.json_encode(); //Obtenemos los resultados como json
+        const servicios = await resultado.json(); //Obtenemos los resultados como json        
 
         mostrarServicios(servicios);
         
     } catch (error) {
         console.log(error);
+        
         
     }
 }
@@ -322,7 +323,7 @@ async function reservarTurno() {
         body: datos
     });
 
-    const resultado = await respuesta.json_encode();
+    const resultado = await respuesta.json();
 
     // console.log(resultado.resultado);    
 
