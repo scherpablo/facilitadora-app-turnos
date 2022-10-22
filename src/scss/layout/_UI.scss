@@ -63,3 +63,30 @@
 .descripcion-pagina {
     text-align: center;
 }
+
+.barra-servicios {
+    
+        @include m.tablet {
+            display: flex;
+        }
+    
+        a {
+            background-color: v.$azul;
+            border: none;
+            width: 100%;
+            display: block;
+            color: v.$blanco;
+            font-weight: v.$bold;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            transition: background-color 300ms ease;
+            text-align: center;
+            border: .5rem solid v.$negro;
+    
+            &:hover {
+                cursor: pointer;
+                background-color: darken(v.$azul, 10%);
+            }                
+        }
+}

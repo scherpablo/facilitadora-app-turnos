@@ -22,11 +22,6 @@ class Router
         // Proteger Rutas...
         session_start();        
 
-        // Arreglo de rutas protegidas...
-        // $rutas_protegidas = ['/admin', '/propiedades/crear', '/propiedades/actualizar', '/propiedades/eliminar', '/vendedores/crear', '/vendedores/actualizar', '/vendedores/eliminar'];
-
-        // $auth = $_SESSION['login'] ?? null;
-
         // $currentUrl = $_SERVER['PATH_INFO'] ?? '/'; //Esta configuracion es para localhost
         $currentUrl = strtok($_SERVER['REQUEST_URI'], '?') ?? '/'; //Esta configuracion es para heroku y funciona la confirmacion de nuevo usuario en mailtrap
         $method = $_SERVER['REQUEST_METHOD'];
