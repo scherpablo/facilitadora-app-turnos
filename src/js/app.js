@@ -207,9 +207,6 @@ function seleccionarHora() {
         if (hora < 9 || hora > 19) {
             e.target.value = '';
             mostrarAlerta('Atención de 09:00 a 19:00 hs', 'error', '.formulario');            
-        } else if (!hora) {
-            e.target.value = hora;
-            mostrarAlerta('Horario no disponible', 'error', '.formulario');
         } else { 
             cita.hora = e.target.value;            
         }
