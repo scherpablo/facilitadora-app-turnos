@@ -116,8 +116,8 @@ const server = window.location.origin; //Contsnate de server que utilizamos lueg
 async function consultarAPI() {
     
     try {   
-        const url = `${location.origin}/api/servicios`;
-        // const url = 'http://localhost:3000/api/servicios';
+        const url = `${location.origin}/api/servicios`; //URL para proyecyo en produccion (HEROKU)
+        // const url = 'http://localhost:3000/api/servicios'; //URL para proyecyo en desarrollo
         
         const resultado = await fetch(url); //Funcion que nos permite consumir la url
         const servicios = await resultado.json(); //Obtenemos los resultados como json        
@@ -306,21 +306,17 @@ async function reservarTurno() {
     datos.append('usuarioId', id);
     datos.append('servicios', idServicios);
 
-    // console.log([...datos]);
-
     try {
         // Peticion a la API
-    const url = `${location.origin}/api/citas`;
-    // const url = 'http://localhost:3000/api/citas';    
+    const url = `${location.origin}/api/citas`; //URL para proyecyo en produccion (HEROKU)
+    // const url = 'http://localhost:3000/api/citas'; //URL para proyecyo en desarrollo   
 
     const respuesta = await fetch(url, {
         method: 'POST',
         body: datos
     });
 
-    const resultado = await respuesta.json();
-
-    // console.log(resultado.resultado);    
+    const resultado = await respuesta.json(); 
 
     if (resultado.resultado) { 
         Swal.fire({
