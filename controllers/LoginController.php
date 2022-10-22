@@ -38,7 +38,6 @@ class LoginController
                         $_SESSION['email'] = $usuario->email;
                         $_SESSION['login'] = true;
 
-
                         // Redireccionar segun admin o cliente
 
                         if ($usuario->admin === "1") {
@@ -151,8 +150,6 @@ class LoginController
                 // Eliminar password actual del objeto
                 $usuario->password = null;
 
-                // debuguear($password);
-
                 // Asignamos el nuevo password al usuario
                 $usuario->password = $password->password;                
 
@@ -241,8 +238,6 @@ class LoginController
 
         // Sanitizar la entrada al HTML
         $token = s($_GET['token']);
-
-        // debuguear($token);
 
         $usuario = Usuario::where('token', $token);
 

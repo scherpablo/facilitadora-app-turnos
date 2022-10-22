@@ -10,3 +10,8 @@
     @include m.boton3(v.$azul, v.$blanco);
     border-radius: .5rem;
 }
+
+.boton-eliminar {
+    @include m.boton3(v.$rojo, v.$blanco);
+    border-radius: .5rem;
+}

@@ -111,24 +111,22 @@ function paginaSiguiente() {
     });
 }
 
-const server = window.location.origin;
+const server = window.location.origin; //Contsnate de server que utilizamos luego para capturar la url de las API (la utilizamos en heroku)
 
 async function consultarAPI() {
     
     try {   
-        // const url = `${location.origin}/api/servicios`;
+        const url = `${location.origin}/api/servicios`;
         // const url = 'http://localhost:3000/api/servicios';
         // const url = 'https://facilitadora-app-de-turnos.herokuapp.com//api/servicios';
-        const url = `${server}/api/servicios`;
+        // const url = `${server}/api/servicios`;
         const resultado = await fetch(url); //Funcion que nos permite consumir la url
         const servicios = await resultado.json(); //Obtenemos los resultados como json        
 
         mostrarServicios(servicios);
         
     } catch (error) {
-        console.log(error);
-        
-        
+        console.log(error);       
     }
 }
 
@@ -313,10 +311,10 @@ async function reservarTurno() {
 
     try {
         // Peticion a la API
-    // const url = `${location.origin}/api/citas`;
+    const url = `${location.origin}/api/citas`;
     // const url = 'http://localhost:3000/api/citas';
     // const url = 'https://facilitadora-app-de-turnos.herokuapp.com//api/citas';
-    const url = `${server}/api/citas`;
+    // const url = `${server}/api/citas`;
 
     const respuesta = await fetch(url, {
         method: 'POST',

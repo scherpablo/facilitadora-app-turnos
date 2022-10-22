@@ -20,19 +20,15 @@ class Router
     public function comprobarRutas()
     {
         // Proteger Rutas...
-        session_start();
-        // if (!isset($_SESSION)) {
-        //     session_start();
-        // };
+        session_start();        
 
         // Arreglo de rutas protegidas...
         // $rutas_protegidas = ['/admin', '/propiedades/crear', '/propiedades/actualizar', '/propiedades/eliminar', '/vendedores/crear', '/vendedores/actualizar', '/vendedores/eliminar'];
 
         // $auth = $_SESSION['login'] ?? null;
 
-        // $currentUrl = $_SERVER['PATH_INFO'] ?? '/';
+        // $currentUrl = $_SERVER['PATH_INFO'] ?? '/'; //Esta configuracion es para localhost
         $currentUrl = strtok($_SERVER['REQUEST_URI'], '?') ?? '/'; //Esta configuracion es para heroku y funciona la confirmacion de nuevo usuario en mailtrap
-        // $currentUrl = $_SERVER['REQUEST_URI'] === '' ? '/' : $_SERVER['REQUEST_URI']; //Esta configuracion es para Heroku
         $method = $_SERVER['REQUEST_METHOD'];
 
         if ($method === 'GET') {
