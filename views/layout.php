@@ -15,7 +15,7 @@
 
     <div class="contenedor-app">
         <div class="imagen">
-            <div class="titulo">Salon de Belleza</div>
+            <!-- <div class="titulo">Salon de Belleza</div> -->
         </div>
 
         <div class="app">
