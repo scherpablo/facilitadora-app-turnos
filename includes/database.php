@@ -10,7 +10,7 @@ $db = mysqli_connect(
 
 // debuguear($_ENV);
 
-// mysqli_set_charset($db, 'utf8mb4');
+mysqli_set_charset($db, 'utf8mb4');
 
 if (!$db) {
     echo "Error: No se pudo conectar a MySQL.";
