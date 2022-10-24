@@ -27,3 +27,15 @@ include_once __DIR__ . '/../tamplates/alertas.php';
     <a href="/olvide">¿Olvidaste tu password?</a>
 
 </div>
+
+<div class='datos'>
+    <h4>Dirección</h4>
+    <p class='datosP'>Diego Armando Maradona 3010</p>
+    <p class='datosP'>Lomas de Zamora</p>
+    <p class='datosP'>Buenos Aires, Argentina</p>
+</div>
+
+<div class='datos'>
+    <h4>Días y Horarios</h4>
+    <p class='datosP'>Martes a Sábados - 09:00 a 19:00 hs</p>
+</div>

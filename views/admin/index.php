@@ -51,7 +51,7 @@ include_once __DIR__ . '/../tamplates/barra.php';
 
                 if (esUltimo($actual, $proximo)) { ?>
                     
-                    <p class='total'>Total: <span><?php echo $total; ?></span></p>
+                    <p class='total'>Total: <span>$<?php echo $total; ?></span></p>
 
                     <form action='/api/eliminar' method='POST'>
                         <input type='hidden' name="id" value="<?php echo $cita->id; ?>">

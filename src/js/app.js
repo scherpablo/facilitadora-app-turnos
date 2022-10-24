@@ -202,11 +202,11 @@ function seleccionarHora() {
     inputHora.addEventListener('input', function (e) {
         
         const horaCita = e.target.value;
-        const hora = horaCita.split(':')[0];
+        const hora = horaCita.split(':')[0];        
 
         if (hora < 9 || hora > 19) {
             e.target.value = '';
-            mostrarAlerta('Atención de 09:00 a 19:00 hs', 'error', '.formulario');            
+            mostrarAlerta('Horario de 09:00 a 19:00 hs', 'error', '.formulario');            
         } else { 
             cita.hora = e.target.value;            
         }

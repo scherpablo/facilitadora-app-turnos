@@ -2,10 +2,8 @@
 <p class="descripcion-pagina">Elige tus servicios y completa tus datos a continuación</p>
 
 <?php
-
 include_once __DIR__ . '/../tamplates/barra.php';
-include_once __DIR__ . '/../tamplates/alertas.php';
-
+// include_once __DIR__ . '/../tamplates/alertas.php';
 ?>
 
 <div id='app'>

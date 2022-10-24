@@ -42,9 +42,3 @@
     <a href="/olvide">¿Olvidaste tu password?</a>
 
 </div>
-
-<!-- <div class="footer">
-
-    <p class="copyright">Creado y Desarrolalado por: <a class="link" href="http://facilitadora.com.ar">facilitadora.com.ar</a></p>
-
-</div> -->

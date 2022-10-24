@@ -79,7 +79,7 @@ class Usuario extends ActiveRecord
             self::$alertas['error'][] = 'El password es obligatorio';
         }
         if (strlen($this->password) < 6) {
-            self::$alertas['error'][] = 'El password debe tener al menos 6 caracteres';
+            self::$alertas['error'][] = 'Password de 6 caracteres mínimo';
         }
         return self::$alertas;
     }
@@ -93,7 +93,7 @@ class Usuario extends ActiveRecord
 
         if ($resultado->num_rows) {
 
-            self::$alertas['error'][] = 'El Usuario ya se encuentra registrado';
+            self::$alertas['error'][] = 'Usuario ya registrado';
         }
 
         return $resultado;
