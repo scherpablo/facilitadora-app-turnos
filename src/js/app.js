@@ -335,7 +335,7 @@ async function reservarTurno() {
         Swal.fire({
             icon: 'error',
             title: 'Error de Conexión',
-            text: 'Hubo un error al guardar el turno',
+            text: 'Horario no disponible',
         })        
     }    
 
