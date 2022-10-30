@@ -28,11 +28,11 @@ class Email
         $mail->Host = 'smtp.hostinger.com';
         $mail->SMTPAuth = true;
         $mail->Port = 465;
-        $mail->Username = 'info@pabloscherpa.com.ar';
-        $mail->Password = 'liamsl16.INFO';
+        $mail->Username = 'soporte@pabloscherpa.com.ar';
+        $mail->Password = 'liamsl16.SOPORTE';
         $mail->SMTPSecure = 'ssl';
 
-        $mail->setFrom('info@pabloscherpa.com.ar');
+        $mail->setFrom('soporte@pabloscherpa.com.ar');
         $mail->addAddress($this->email);
         $mail->Subject = 'Confirma tu Cuenta';
 
