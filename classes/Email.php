@@ -2,6 +2,7 @@
 
 namespace Classes;
 
+use PDO;
 use PHPMailer\PHPMailer\PHPMailer;
 
 class Email
@@ -24,20 +25,15 @@ class Email
         // Crear el objeto del mail
         $mail = new PHPMailer();
         $mail->isSMTP();
-        // $mail->Host = 'c2050367.ferozo.com';
-        $mail->Host = 'smtp.mailtrap.io'; //Configuracion para localhost
+        $mail->Host = 'smtp.hostinger.com';
         $mail->SMTPAuth = true;
-        // $mail->Port = 465;
-        $mail->Port = 2525; //Configuracion para localhost
-        // $mail->Username = 'pablo@facilitadora.com.ar';
-        $mail->Username = 'c6245119063e5f'; //Configuracion para localhost
-        // $mail->Password = 'Liamsl1984';
-        $mail->Password = '178583a5e38e72'; //Configuracion para localhost
+        $mail->Port = 465;
+        $mail->Username = 'info@pabloscherpa.com.ar';
+        $mail->Password = 'liamsl16.INFO';
+        $mail->SMTPSecure = 'ssl';
 
-        // $mail->setFrom('pablo@facilitadora.com.ar');
-        $mail->setFrom('cuentas@facilitadora-app-de-turnos.com.ar');
-        // $mail->addAddress('scherpablo@gmail.com', 'facilitadora-app-de-turnos.com.ar');
-        $mail->addAddress('cuentas@facilitadora-app-de-turnos.com.ar', 'facilitadora-app-de-turnos.com.ar');
+        $mail->setFrom('info@pabloscherpa.com.ar');
+        $mail->addAddress($this->email);
         $mail->Subject = 'Confirma tu Cuenta';
 
         // Utilizamos HTML
@@ -46,7 +42,7 @@ class Email
         $mail->Encoding = 'base64';
 
         $contenido = "<html>";
-        $contenido .= "<p><strong>Hola " . $this->email . "</strong> Has creado tu cuenta en Facilitadora App de Turnos,
+        $contenido .= "<p><strong>Hola " . $this->nombre . "</strong> Has creado tu cuenta en Facilitadora App de Turnos,
         solo debes confirmarla haciendo click en el siguiente enlace.</p>";
         // $contenido .= "<p>Presiona aquí: <a href= 'https://facilitadora-app-de-turnos.herokuapp.com/confirmarCuenta?token=" . $this->token . "'>Confirmar Cuenta</a></p>";
         $contenido .= "<p>Presiona aquí: <a href= 'http://localhost:3000/confirmarCuenta?token=" . $this->token . "'>Confirmar Cuenta</a></p>";

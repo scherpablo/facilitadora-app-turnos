@@ -22,8 +22,8 @@ class Router
         // Proteger Rutas...
         session_start();        
 
-        // $currentUrl = $_SERVER['PATH_INFO'] ?? '/'; //Esta configuracion es para localhost
-        $currentUrl = strtok($_SERVER['REQUEST_URI'], '?') ?? '/'; //Esta configuracion es para heroku y funciona la confirmacion de nuevo usuario en mailtrap
+        $currentUrl = $_SERVER['PATH_INFO'] ?? '/'; //Esta configuracion es para localhost
+        // $currentUrl = strtok($_SERVER['REQUEST_URI'], '?') ?? '/'; //Esta configuracion es para heroku y funciona la confirmacion de nuevo usuario en mailtrap
         $method = $_SERVER['REQUEST_METHOD'];
 
         if ($method === 'GET') {
@@ -57,3 +57,4 @@ class Router
         include_once __DIR__ . '/views/layout.php';
     }
 }
+
