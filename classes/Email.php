@@ -86,6 +86,5 @@ class Email
 
         // Enviar el mail
         $mail->send();
-
     }
 }
