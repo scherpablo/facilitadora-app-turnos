@@ -60,14 +60,14 @@ class Email
         // Crear el objeto del mail
         $mail = new PHPMailer();
         $mail->isSMTP();
-        $mail->Host = 'smtp.mailtrap.io';
+        $mail->Host = 'smtp.hostinger.com';
         $mail->SMTPAuth = true;
-        $mail->Port = 2525;
-        $mail->Username = 'c6245119063e5f';
-        $mail->Password = '178583a5e38e72';
+        $mail->Port = 465;
+        $mail->Username = 'soporte@pabloscherpa.com.ar';
+        $mail->Password = 'liamsl16.SOPORTE';
 
-        $mail->setFrom('cuentas@facilitadora-app-de-turnos.com.ar');
-        $mail->addAddress('cuentas@facilitadora-app-de-turnos.com.ar', 'facilitadora-app-de-turnos.com.ar');
+        $mail->setFrom('soporte@pabloscherpa.com.ar');
+        $mail->addAddress($this->email);
         $mail->Subject = 'Reestablece tu password';
 
         // Utilizamos HTML
