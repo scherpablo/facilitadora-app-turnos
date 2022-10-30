@@ -39,7 +39,7 @@ class Email
         // Utilizamos HTML
         $mail->isHTML(TRUE);
         $mail->CharSet = 'UTF-8';
-        $mail->Encoding = 'base64';
+        // $mail->Encoding = 'base64';
 
         $contenido = "<html>";
         $contenido .= "<p><strong>Hola " . $this->nombre . "</strong> Has creado tu cuenta en Facilitadora App de Turnos,
