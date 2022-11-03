@@ -2,10 +2,10 @@
 
 namespace Classes;
 
-use PDO;
+// use PDO;
 use PHPMailer\PHPMailer\PHPMailer;
 
-require __DIR__ . '/../vendor/autoload.php';
+// require __DIR__ . '/../vendor/autoload.php';
 
 class Email
 {
