@@ -30,11 +30,11 @@ class Email
         $mail->Host = 'smtp.mailtrap.io';
         $mail->SMTPAuth = true;
         $mail->Port = 2525;
-        $mail->Username = 'c6245119063e5f';
-        $mail->Password = '178583a5e38e72';
+        $mail->Username = '59029834a40889';
+        $mail->Password = 'd18616fd807bd9';
         $mail->SMTPSecure = 'tls';
 
-        $mail->setFrom('facilitadora@app-de-turnos.com.ar');
+        $mail->setFrom('facilitadora@appdeturnos.com.ar');
         $mail->addAddress($this->email);
         $mail->Subject = 'Confirma tu Cuenta';
 
@@ -65,11 +65,11 @@ class Email
         $mail->Host = 'smtp.mailtrap.io';
         $mail->SMTPAuth = true;
         $mail->Port = 2525;
-        $mail->Username = 'c6245119063e5f';
-        $mail->Password = '178583a5e38e72';
+        $mail->Username = '59029834a40889';
+        $mail->Password = 'd18616fd807bd9';
         $mail->SMTPSecure = 'tls';
 
-        $mail->setFrom('facilitadora@app-de-turnos.com.ar');
+        $mail->setFrom('facilitadora@appdeturnos.com.ar');
         $mail->addAddress($this->email);
         $mail->Subject = 'Reestablece tu password';
 
