@@ -5,6 +5,8 @@ namespace Classes;
 use PDO;
 use PHPMailer\PHPMailer\PHPMailer;
 
+require __DIR__ . '/../vendor/autoload.php';
+
 class Email
 {
 
@@ -25,21 +27,21 @@ class Email
         // Crear el objeto del mail
         $mail = new PHPMailer();
         $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com';
+        $mail->Host = 'smtp.mailtrap.io';
         $mail->SMTPAuth = true;
-        $mail->Port = 587;
-        $mail->Username = 'scherpablo@gmail.com';
-        $mail->Password = 'xtamps99gmail';
+        $mail->Port = 2525;
+        $mail->Username = 'c6245119063e5f';
+        $mail->Password = '178583a5e38e72';
         $mail->SMTPSecure = 'tls';
 
-        $mail->setFrom('scherpablo@gmail.com');
+        $mail->setFrom('facilitadora@app-de-turnos.com.ar');
         $mail->addAddress($this->email);
         $mail->Subject = 'Confirma tu Cuenta';
 
         // Utilizamos HTML
         $mail->isHTML(TRUE);
         $mail->CharSet = 'UTF-8';
-        // $mail->Encoding = 'base64';
+        $mail->Encoding = 'base64';
 
         $contenido = "<html>";
         $contenido .= "<p><strong>Hola " . $this->nombre . "</strong> Has creado tu cuenta en Facilitadora App de Turnos,
@@ -60,14 +62,14 @@ class Email
         // Crear el objeto del mail
         $mail = new PHPMailer();
         $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com';
+        $mail->Host = 'smtp.mailtrap.io';
         $mail->SMTPAuth = true;
-        $mail->Port = 587;
-        $mail->Username = 'scherpablo@gmail.com';
-        $mail->Password = 'xtamps99gmail';
+        $mail->Port = 2525;
+        $mail->Username = 'c6245119063e5f';
+        $mail->Password = '178583a5e38e72';
         $mail->SMTPSecure = 'tls';
 
-        $mail->setFrom('scherpablo@gmail.com');
+        $mail->setFrom('facilitadora@app-de-turnos.com.ar');
         $mail->addAddress($this->email);
         $mail->Subject = 'Reestablece tu password';
 
