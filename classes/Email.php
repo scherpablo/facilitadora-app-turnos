@@ -10,15 +10,16 @@ use PHPMailer\PHPMailer\PHPMailer;
 class Email
 {
 
-    public $email;
     public $nombre;
+    public $email;    
     public $token;
 
-    public function __construct($email, $nombre, $token)
+    // public function __construct($email, $nombre, $token)
+    public function __construct($nombre, $email, $token)
     {
 
-        $this->email = $email;
         $this->nombre = $nombre;
+        $this->email = $email;        
         $this->token = $token;
     }
 
@@ -27,14 +28,14 @@ class Email
         // Crear el objeto del mail
         $mail = new PHPMailer();
         $mail->isSMTP();
-        $mail->Host = 'smtp.mailtrap.io';
+        $mail->Host = 'smtp.hostinger.com';
         $mail->SMTPAuth = true;
-        $mail->Port = 2525;
-        $mail->Username = '59029834a40889';
-        $mail->Password = 'd18616fd807bd9';
-        $mail->SMTPSecure = 'tls';
+        $mail->Port = 465;
+        $mail->Username = 'soporte@pabloscherpa.com.ar';
+        $mail->Password = 'liamsl16.SOPORTE';
+        $mail->SMTPSecure = 'ssl';
 
-        $mail->setFrom('facilitadora@appdeturnos.com.ar');
+        $mail->setFrom('soporte@pabloscherpa.com.ar');
         $mail->addAddress($this->email);
         $mail->Subject = 'Confirma tu Cuenta';
 
@@ -62,14 +63,14 @@ class Email
         // Crear el objeto del mail
         $mail = new PHPMailer();
         $mail->isSMTP();
-        $mail->Host = 'smtp.mailtrap.io';
+        $mail->Host = 'smtp.hostinger.com';
         $mail->SMTPAuth = true;
-        $mail->Port = 2525;
-        $mail->Username = '59029834a40889';
-        $mail->Password = 'd18616fd807bd9';
-        $mail->SMTPSecure = 'tls';
+        $mail->Port = 465;
+        $mail->Username = 'soporte@pabloscherpa.com.ar';
+        $mail->Password = 'liamsl16.SOPORTE';
+        $mail->SMTPSecure = 'ssl';
 
-        $mail->setFrom('facilitadora@appdeturnos.com.ar');
+        $mail->setFrom('soporte@pabloscherpa.com.ar');
         $mail->addAddress($this->email);
         $mail->Subject = 'Reestablece tu password';
 

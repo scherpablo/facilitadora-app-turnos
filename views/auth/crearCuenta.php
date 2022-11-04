@@ -8,18 +8,18 @@
 <form action="/crearCuenta" class="formulario" method="POST">
 
     <div class="campo">
-        <label for="text">Nombre</label>
+        <label for="nombre">Nombre</label>
         <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" value="<?php echo s($usuario->nombre); ?>">
     </div>
 
     <div class="campo">
-        <label for="text">Apellido</label>
+        <label for="apellido">Apellido</label>
         <input type="text" id="apellido" name="apellido" placeholder="Ingresa tu apellido" value="<?php echo s($usuario->apellido); ?>">
     </div>
 
     <div class="campo">
-        <label for="tel">Telefono</label>
-        <input type="phone" id="telefono" name="telefono" placeholder="Ingresa tu telefono" value="<?php echo s($usuario->telefono); ?>">
+        <label for="telefono">Telefono</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Ingresa tu telefono" value="<?php echo s($usuario->telefono); ?>">
     </div>
 
     <div class="campo">

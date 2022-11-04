@@ -96,7 +96,7 @@ class LoginController
                     $usuario->guardar();
 
                     // Enviar Email
-                    $email = new Email($usuario->email, $usuario->nombre, $usuario->token);
+                    $email = new Email($usuario->nombre, $usuario->email, $usuario->token);
                     $email->enviarInstrucciones();
 
                     // Mostrar mensaje de exito
