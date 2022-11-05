@@ -32,7 +32,8 @@ class Email
         $mail->SMTPAuth = true;
         $mail->Port = 587;
         $mail->Username = 'appdeturnos@gmail.com';
-        $mail->Password = 'tpvwtlnspyrkstdm';
+        // $mail->Password = 'tpvwtlnspyrkstdm';
+        $mail->Password = 'tpvwtlnspyrkstd';
         $mail->SMTPSecure = 'tls';
 
         $mail->setFrom('appdeturnos@gmail.com');
@@ -67,7 +68,8 @@ class Email
         $mail->SMTPAuth = true;
         $mail->Port = 587;
         $mail->Username = 'appdeturnos@gmail.com';
-        $mail->Password = 'tpvwtlnspyrkstdm';
+        // $mail->Password = 'tpvwtlnspyrkstdm';
+        $mail->Password = 'tpvwtlnspyrkstd';
         $mail->SMTPSecure = 'tls';
 
         $mail->setFrom('appdeturnos@gmail.com');
