@@ -28,14 +28,14 @@ class Email
         // Crear el objeto del mail
         $mail = new PHPMailer();
         $mail->isSMTP();
-        $mail->Host = 'smtp.hostinger.com';
+        $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Port = 465;
-        $mail->Username = 'soporte@pabloscherpa.com.ar';
-        $mail->Password = 'liamsl16.SOPORTE';
-        $mail->SMTPSecure = 'ssl';
+        $mail->Port = 587;
+        $mail->Username = 'appdeturnos@gmail.com';
+        $mail->Password = 'tpvwtlnspyrkstdm';
+        $mail->SMTPSecure = 'tls';
 
-        $mail->setFrom('soporte@pabloscherpa.com.ar');
+        $mail->setFrom('appdeturnos@gmail.com');
         $mail->addAddress($this->email);
         $mail->Subject = 'Confirma tu Registración';
 
@@ -63,14 +63,14 @@ class Email
         // Crear el objeto del mail
         $mail = new PHPMailer();
         $mail->isSMTP();
-        $mail->Host = 'smtp.hostinger.com';
+        $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Port = 465;
-        $mail->Username = 'soporte@pabloscherpa.com.ar';
-        $mail->Password = 'liamsl16.SOPORTE';
-        $mail->SMTPSecure = 'ssl';
+        $mail->Port = 587;
+        $mail->Username = 'appdeturnos@gmail.com';
+        $mail->Password = 'tpvwtlnspyrkstdm';
+        $mail->SMTPSecure = 'tls';
 
-        $mail->setFrom('soporte@pabloscherpa.com.ar');
+        $mail->setFrom('appdeturnos@gmail.com');
         $mail->addAddress($this->email);
         $mail->Subject = 'Reestablece tu password';
 
