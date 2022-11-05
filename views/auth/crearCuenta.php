@@ -32,6 +32,10 @@
         <input type="password" id="password" name="password" placeholder="Ingresa un password">
     </div>
 
+    <div class="campo">
+        <div class="g-recaptcha" class="rc-imageselect" data-sitekey="6LeOwN8iAAAAAPWDQX1XbuTtEYxfLDHIESejzlIj"></div>
+    </div>
+
     <input type="submit" class="boton" value="Crear Cuenta">
 
 </form>
@@ -42,3 +46,5 @@
     <a href="/olvide">¿Olvidaste tu password?</a>
 
 </div>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>

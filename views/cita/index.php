@@ -31,7 +31,7 @@ include_once __DIR__ . '/../tamplates/barra.php';
             </div>
             <div class='campo'>
                 <label for='hora'>Hora</label>
-                <input type='time' id='hora' placeholder='ingresa una hora'>
+                <input type='time' id='hora' placeholder='ingresa una hora' step='1800'>
             </div>
             <input type='hidden' id='id' value='<?php echo $id; ?>'>
         </form>

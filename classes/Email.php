@@ -37,7 +37,7 @@ class Email
 
         $mail->setFrom('soporte@pabloscherpa.com.ar');
         $mail->addAddress($this->email);
-        $mail->Subject = 'Confirma tu Cuenta';
+        $mail->Subject = 'Confirma tu Registración';
 
         // Utilizamos HTML
         $mail->isHTML(TRUE);
