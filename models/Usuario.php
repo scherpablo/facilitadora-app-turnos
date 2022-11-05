@@ -2,8 +2,6 @@
 
 namespace Model;
 
-
-
 class Usuario extends ActiveRecord
 {
     // Base de Datos 
@@ -126,14 +124,14 @@ class Usuario extends ActiveRecord
     }
 }
 
-$ip = $_SERVER['REMOTE_ADD'];
-$captcha =  $_POST['g-recaptcha-response'];
-$secretkey = '6LeOwN8iAAAAAPxAZRj4Xfa_EWxcmA6tM52t6V4q';
+// $ip = $_SERVER['REMOTE_ADD'];
+// $captcha =  $_POST['g-recaptcha-response'];
+// $secretkey = '6LeOwN8iAAAAAPxAZRj4Xfa_EWxcmA6tM52t6V4q';
 
-$respuesta = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=$secretkey&response=$captacha&remoteip=$ip');
+// $respuesta = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=$secretkey&response=$captacha&remoteip=$ip');
 
-$atributos = json_decode($respuesta, TRUE);
+// $atributos = json_decode($respuesta, TRUE);
 
-if (!$atributos['success']) {
-    self::$alertas['error'][] = 'Verifica el Captcha';
-}
+// if (!$atributos['success']) {
+//     self::$alertas['error'][] = 'Verifica el Captcha';
+// }
