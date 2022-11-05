@@ -204,16 +204,6 @@ function seleccionarHora() {
         const horaCita = e.target.value;
         const hora = horaCita.split(':')[0];        
 
-        // if (hora < 9 || hora > 19) {
-        //     e.target.value = '';
-        //     mostrarAlerta('Horario de 09:00 a 19:00 hs', 'error', '.formulario');            
-        // } else if(hora != 9){ 
-        //     e.target.value = '';
-        //     mostrarAlerta('Selecciona horaios cada 30 minutos', 'error', '.formulario');  
-        // } else {
-        //     cita.hora = e.target.value; 
-        // }
-
         if (hora < 9 || hora > 19) {
             e.target.value = '';
             mostrarAlerta('Horario de 09:00 a 19:00 hs', 'error', '.formulario');            
