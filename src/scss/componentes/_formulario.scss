@@ -25,4 +25,14 @@
             cursor: not-allowed;
         }
     }
+    &.captcha {
+        display: flex;
+        justify-content: center;
+
+        @include m.telefono {
+            justify-content: flex-end;
+        }
+    }
+    
 }
+

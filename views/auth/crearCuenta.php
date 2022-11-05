@@ -35,7 +35,7 @@
         <input type="password" id="password" name="password" placeholder="Ingresa un password">
     </div>
 
-    <div class="campo">
+    <div class="campo captcha">
         <div class="g-recaptcha" class="rc-imageselect" data-sitekey="6LeOwN8iAAAAAPWDQX1XbuTtEYxfLDHIESejzlIj"></div>
     </div>
 
