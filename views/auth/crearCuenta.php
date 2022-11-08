@@ -2,11 +2,10 @@
 <p class="descripcion-pagina">Llena el siguiente formulario</p>
 
 <?php
-    include_once __DIR__ . '/../tamplates/alertas.php';
-
-    
-    
+    include_once __DIR__ . '/../tamplates/alertas.php';   
 ?>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 <form action="/crearCuenta" class="formulario" method="POST">
 
@@ -50,4 +49,4 @@
 
 </div>
 
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
