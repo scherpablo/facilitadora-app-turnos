@@ -117,8 +117,8 @@ async function consultarAPI() {
     
     try {   
         // const url = `${location.origin}/api/servicios`; //URL para proyecyo en produccion (HEROKU)
-        // const url = 'http://localhost:3000/api/servicios'; //URL para proyecyo en desarrollo
-        const url = 'mysql://${{ MYSQLUSER }}:${{ MYSQLPASSWORD }}@${{ MYSQLHOST }}:${{ MYSQLPORT }}/${{ MYSQLDATABASE }}'; 
+        const url = 'http://localhost:3000/api/servicios'; //URL para proyecyo en desarrollo
+        // const url = 'mysql://${{ MYSQLUSER }}:${{ MYSQLPASSWORD }}@${{ MYSQLHOST }}:${{ MYSQLPORT }}/${{ MYSQLDATABASE }}'; 
         
         const resultado = await fetch(url); //Funcion que nos permite consumir la url
         const servicios = await resultado.json(); //Obtenemos los resultados como json        
@@ -311,8 +311,8 @@ async function reservarTurno() {
     try {
         // Peticion a la API
     // const url = `${location.origin}/api/citas`; //URL para proyecyo en produccion (HEROKU)
-    // const url = 'http://localhost:3000/api/citas'; //URL para proyecyo en desarrollo  
-    const url = 'mysql://${{ MYSQLUSER }}:${{ MYSQLPASSWORD }}@${{ MYSQLHOST }}:${{ MYSQLPORT }}/${{ MYSQLDATABASE }}';  
+    const url = 'http://localhost:3000/api/citas'; //URL para proyecyo en desarrollo  
+    // const url = 'mysql://${{ MYSQLUSER }}:${{ MYSQLPASSWORD }}@${{ MYSQLHOST }}:${{ MYSQLPORT }}/${{ MYSQLDATABASE }}';  
 
     const respuesta = await fetch(url, {
         method: 'POST',
